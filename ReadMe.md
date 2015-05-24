@@ -15,3 +15,5 @@ User Stories
 
   Double Maybe:
   8. Be able to add/share recipes
+
+<!-- mms: Please share a little about technologies used (gems, apis, etc) -->

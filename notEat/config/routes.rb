@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
+  # mms: nice. I really like this new syntax for authentication. 
   authenticate :user do
     resources  :reasons, only: [:new, :create, :edit, :update, :destroy]
     resources  :restrictions, only: [:new, :create, :edit, :update, :destroy]

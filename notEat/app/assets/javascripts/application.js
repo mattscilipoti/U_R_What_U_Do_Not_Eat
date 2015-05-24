@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('form#search input[type=submit]').on("click", searchData);
 })
 
-
+// mms: seeResults?  Where is this instantiated?
 seeResults.addEventListener('click', function(event){
    event.preventDefault();
    $.ajax({
@@ -14,6 +14,8 @@ seeResults.addEventListener('click', function(event){
 })
 
 }
+
+// mms: where is this used?
 function displayResults(results) {
   var container = $("#results");
   container.empty();

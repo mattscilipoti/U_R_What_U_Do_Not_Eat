@@ -2,6 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    # mms: this doesn't look right.  What drove this "floating" comparison?  If it is a workarounf, please comment.
     user == User.new
     can :read, Post
     can :read, Result
@@ -10,7 +11,7 @@ class Ability
     can :read, Period
     can :read, Profile
 
-    if user
+    if user  # mms: can we clarify that these actions are available for all logged in users i.e user_signed_in?
       can :create, Post
       can :create, Profile
       can :read, Food
